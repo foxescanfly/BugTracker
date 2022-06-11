@@ -1,0 +1,15 @@
+.navbar{
+    position: absolute !important;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 35px #e0e0e0,
+    -10px -10px 35px white;
+}
+.row-content{
+    border-bottom: 1px ridge;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    
+}
+.color-darker{
+    background-color: rgb(196, 196, 196);
+}
