@@ -1,37 +1,54 @@
-
-import { NavItem,NavLink,Nav,NavbarBrand} from "reactstrap";
-import './Sidebar.css'
-import Logo from '../../Images/Logo66-01.png'
-import { Row, Col } from "reactstrap";
-const Sidebar = ()=>{
-    
-    return(
-      <Nav vertical className='navbar p-3'  expand="md">
-        <div className="row-content mt-1">
-          <Row>
-            <Col>
-              <NavbarBrand href="/" className="mb-3">
-                <img src={Logo} height='100' width='100'/>
-              </NavbarBrand>
-              <small className="mt-3">Welcome, User</small>
-            </Col>
-            
-          </Row>
-          </div>
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChartBar,
   
-        <NavItem>
-          <NavLink className='nav-link btn' to='/'>
-            <i className="fa fa-regular fa-chart-tree-map"/>Dashboard
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink className='nav-link btn' to='/'>
-            Bugs
-          </NavLink>
-        </NavItem>
-      </Nav>
-    )
+  faAddressBook,
+  faCopy,
+} from "@fortawesome/free-regular-svg-icons";
+import { NavItem, NavLink, Nav, NavbarBrand, Col, Row } from "reactstrap";
+import { Link } from "react-router-dom";
+import './Sidebar.css'
+import Brand from'../../Images/Logo66-01.png'
 
-}
 
-export default Sidebar
+const SideBar = () => (
+  <Col xs='2'className="sidebar-container">
+    <div className="sidebar">
+      <NavbarBrand href="/" className='ms-5 sidebar-header'>
+        <Col>
+              <img src={Brand} width='150' height='150'alt='logo'/>
+              <h2 className='sidebar-header'>BugTracker</h2>
+              <p className='sidebar-subheader'>Welcome, user</p>
+        </Col>
+      </NavbarBrand>
+      <div >
+        <Nav vertical className="list-unstyled pb-3">
+            <NavItem>
+            <NavLink tag={Link} to={"/"}>
+              <Row>
+                <Col>
+                  <FontAwesomeIcon icon={faChartBar} className="mr-2" />
+                </Col>
+                <Col>
+                  <p style={{color:'gray'}} className='link d-none d-sm-block'>Dashboard</p>
+                </Col>
+              </Row>
+            </NavLink>
+          </NavItem>
+          
+          <NavItem>
+            <NavLink tag={Link} to={"/bugs"}>
+              <FontAwesomeIcon icon={faAddressBook} className="mr-2" />
+              My Bugs
+            </NavLink>
+          </NavItem>
+          
+        </Nav>
+      </div>
+    </div>
+  </Col>
+);
+
+
+export default SideBar;

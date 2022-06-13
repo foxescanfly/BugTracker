@@ -1,15 +1,73 @@
-.navbar{
-    position: absolute !important;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 10px 10px 35px #e0e0e0,
-    -10px -10px 35px white;
-}
+
 .row-content{
     border-bottom: 1px ridge;
     margin-bottom: 20px;
     padding-bottom: 20px;
     
 }
-.color-darker{
-    background-color: rgb(196, 196, 196);
+.link{
+    margin-right: 20px;
 }
+
+
+.nav-link{
+    color:rgb(87, 87, 87) !important
+}
+.sidebar {
+    min-width: 200px;
+    max-width: 250px;
+   padding-left: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 35px #e0e0e0,
+    -10px -10px 35px white;
+    color:gray;
+    min-height: 100vh;
+  }
+  .sidebar.is-open {
+    margin-left: 0;
+    transition: 0.5s;
+  }
+  
+  .sidebar-header {
+    color: #969696 !important;
+  }
+  .sidebar-subheader {
+    color: #969696 !important;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  
+  .sidebar-header h3 {
+    color: #fff;
+    padding: 1em;
+  }
+  
+  .sidebar ul p {
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .menu-open {
+    background: #6d7fcc;
+  }
+  
+  .nav-item:hover {
+    background-color: #afafaf;
+  }
+  
+  .items-menu {
+    color: #fff;
+    background: #6d7fcc;
+  }
+  
+  li a.dropdown-toggle::after {
+    display: inline-flex;
+    position: relative;
+    left: 60%;
+    top: 10%;
+  }
+  
+
+  
+
+
