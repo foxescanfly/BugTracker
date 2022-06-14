@@ -1,12 +1,12 @@
+import BugsTypeCard from "../BugsTypeCard/BugsTypeCard"
 
-import './Dashboard.css'
-const Dashboard =()=>{
+const Dashboard = ()=>{
     return(
-        <div className="dashboard">
-        
-        </div>
+        <BugsTypeCard/>
     )
+    
 
 
 }
+
 export default Dashboard

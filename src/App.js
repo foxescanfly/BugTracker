@@ -1,30 +1,26 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import BugsDisplay from './Views/BugsDisplay/BugsDisplay';
-import Dashboard from './Views/Dashboard/Dashboard';
-import Sidebar from './Views/Sidebar/Sidebar';
-import { Col, Row, Container } from 'reactstrap';
-import './App.css'
+import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+import SideBar from "./Views/Sidebar/Sidebar";
+import Content from "./Content";
+import "./App.css";
+import { Col } from "reactstrap";
+
+const App = () => {
+  const [sidebarIsOpen, setSidebarOpen] = useState(true);
+  const toggleSidebar = () => setSidebarOpen(!sidebarIsOpen);
+
   return (
-    <div className="App">
-      <Row>
-        <Col xs='4' className='pr-1'>
-          <Sidebar/>
+    <Router>
+      <div className="App wrapper">
+        <SideBar toggle={toggleSidebar} isOpen={sidebarIsOpen} />
+        <Col style={{marginLeft:"20%"}}>
+          <Content toggleSidebar={toggleSidebar} sidebarIsOpen={sidebarIsOpen} />
         </Col>
-     
-      <Col xs='6'>
-        <Routes>
-          <Route path='/' element={<Dashboard/>}/>
-          <Route path='bugs' element={<BugsDisplay/>}/>
-        </Routes>
-      </Col>
-      
-      </Row>
-     
-    </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

@@ -3,6 +3,7 @@ import bugModel from "../../Models/bugModel";
 
 const initialState = {
     bugsArray:[new bugModel({id: 0,
+        _id:0,
         name: "First Bug",
         project:"Bug Tracker App",
         description: "Reboot on Submit",
@@ -43,3 +44,9 @@ export const selectAllBugs=(state)=>{
     return state.bugs.bugsArray
 
 }
+
+export const selectBugById = (id) => (state) => {
+    return state.bugs.bugsArray.find(
+        (bug) => bug._id === parseInt(id)
+    );
+};
