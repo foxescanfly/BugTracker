@@ -24,7 +24,6 @@ const SideBar = ({ isOpen, toggle }) => (
 
   <div className={classNames("sidebar",{ "is-open": isOpen })} sticky='top'>
     <div className="sidebar-header">
-      
        <NavbarBrand  href="/" >
         <img src={Logo} width='150' height='150'/>
        </NavbarBrand>

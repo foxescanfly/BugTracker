@@ -7,7 +7,7 @@ const initialState = {
         name: "First Bug",
         project:"Bug Tracker App",
         description: "Reboot on Submit",
-        priority:"High",
+        priority:"high",
         creator:"John Smith",
         assigned: "Hailey Smith",
         datePosted:"4/4/2022"
@@ -42,7 +42,6 @@ export const {addBug} = bugsSlice.actions
 
 export const selectAllBugs=(state)=>{
     return state.bugs.bugsArray
-
 }
 
 export const selectBugById = (id) => (state) => {

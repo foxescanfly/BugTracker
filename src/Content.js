@@ -7,14 +7,14 @@ import Dashboard from "./Views/Dashboard/Dashboard";
 import BugView from "./Views/BugView/BugView";
 
 
-const Content = ({ sidebarIsOpen, toggleSidebar }) => (
+const Content = ({ sidebarIsOpen, toggleSidebar }) => {
+  return(
   <Container
     fluid
     className={classNames("content", { "is-open": sidebarIsOpen })}
   >
-    
     <Routes>
-      <Route exact path="/" element={<Dashboard/>} />
+      <Route exact path="/" element={<Dashboard sidebarIsOpen={sidebarIsOpen}/>} />
       <Route exact path="/bugs" element={<BugsDisplay/>} />
       <Route exact path="/Pages" element={() => "Pages"} />
       <Route exact path="/faq" element={() => "FAQ"} />
@@ -22,6 +22,6 @@ const Content = ({ sidebarIsOpen, toggleSidebar }) => (
       <Route path="bugs/:bugId" element={<BugView/>} />
     </Routes>
   </Container>
-);
+)};
 
 export default Content

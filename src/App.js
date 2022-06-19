@@ -15,7 +15,7 @@ const App = () => {
     <Router>
       <div className="App wrapper">
         <SideBar toggle={toggleSidebar} isOpen={sidebarIsOpen} />
-        <Col style={{marginLeft:"20%"}}>
+        <Col style={{marginLeft:"20%"}} className={sidebarIsOpen?'content-col':'content-col-is-open'}>
           <Content toggleSidebar={toggleSidebar} sidebarIsOpen={sidebarIsOpen} />
         </Col>
       </div>

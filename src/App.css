@@ -56,4 +56,15 @@
       left: 68%;
     }
   }
+
+  .content-col{
+    transition: .4s;
+}
+.dashboard-col{
+    margin-left: 100px ;
+}
+.content-col-is-open{
+    transition: .4s;
+    transform: translate(-120px,0px);
+}
   
